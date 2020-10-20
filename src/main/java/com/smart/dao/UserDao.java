@@ -14,7 +14,7 @@ public class UserDao {
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
-    private final static String UPDATE_LOGIN_INFO_SQL = " UPDATE t_user SET last_visit = ?, last_ip = ?, credits = ? WHERE user_id = ?";
+    private final static String UPDATE_LOGIN_INFO_SQL = " UPDATE t_user SET last_visit=?, last_ip=?, credits=? WHERE user_id=?";
 
     public int getMatchCount(String userName, String password){
         String sqlStr = " SELECT count(*) FROM t_user where user_name = ? and password= ?";
