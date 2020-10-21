@@ -76,6 +76,11 @@
             <version>${spring.version}</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.17</version>
+        </dependency>
     </dependencies>
 <build>
     <plugins>
@@ -86,7 +91,7 @@
             <configuration>
                 <connectors>
                     <connector implementation="org.mortbay.jetty.nio.SelectChannelConnector">
-                        <port>8000</port>
+                        <port>9000</port>
                         <maxIdleTime>60000</maxIdleTime>
                     </connector>
                 </connectors>
